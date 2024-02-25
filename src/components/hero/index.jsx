@@ -1,22 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
+import axios from "axios";
 
 const Hero = () => {
   const { DarkMode } = useMainContext();
+  const [color, setColor] = useState([]);
+
+  async function getBackdrop() {
+    await axios(`http://localhost:3000/bakdrop_path`).then((res) => {
+      res.data.map((el) => {
+        setColor((prev) => [...prev, el]);
+      });
+    });
+  }
+  console.log(color);
+
+  useEffect(() => {
+    getBackdrop();
+  }, []);
+  let image = color[Math.floor(Math.random() * color.length)];
+
   return (
     <div>
       <div
         style={{
-          background: DarkMode
-            ? "URl(https://images.template.net/222293/free-abstract-gaming-background-edit-online.jpg) no-repeat center/cover"
-            : "URL(https://www.ediiie.com/blog/assets/admin/uploads/Storytelling-in-video-games-development.jpg) no-repeat center/cover",
-          transition: "1s",
+          background: `url(${image && image.img}) no-repeat center/cover`,
         }}
         id="hero"
       >
-        <div className="container">
+        <div className="containe">
           <div className="hero">
-            <img src="" alt="" />
+            <div className="hero-box">
+              <input className="input" type="text" placeholder="text" />
+              <button> Button</button>
+            </div>
           </div>
         </div>
       </div>

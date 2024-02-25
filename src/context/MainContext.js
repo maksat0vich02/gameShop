@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const useProduct = createContext();
@@ -5,6 +6,7 @@ export const useMainContext = () => useContext(useProduct);
 let darkMode = JSON.parse(localStorage.getItem("dark"));
 
 const MainContext = ({ children }) => {
+  const API = "http://localhost:3000/data";
   const [DarkMode, setDarkmode] = useState(darkMode || false);
 
   function localDark() {
