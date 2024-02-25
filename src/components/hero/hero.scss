@@ -1,4 +1,51 @@
 #hero {
   height: 100vh;
-  object-fit: cover;
+  width: 100%;
+  filter: brightness(60%);
+  opacity: 92%;
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 300px;
+    .hero-box {
+      .input {
+        border: 2px solid transparent;
+        width: 50em;
+        height: 3em;
+        padding-left: 0.8em;
+        outline: none;
+        overflow: hidden;
+        background-color: #f3f3f3;
+        border-radius: 10px 0 0 10px;
+        transition: all 0.5s;
+      }
+
+      .input:hover,
+      .input:focus {
+        border: 2px solid #4a9dec;
+        box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+        background-color: white;
+      }
+    }
+    button {
+      color: #090909;
+      padding: 0.5em 1.7em;
+      font-size: 18px;
+      border-radius: 0 10px 10px 0;
+      background: #e8e8e8;
+      cursor: pointer;
+      border: 1px solid #e8e8e8;
+      transition: all 0.3s;
+      box-shadow: 1px 1px 1px #c5c5c5, -6px -6px 12px #ffffff;
+    }
+
+    button:hover {
+      border: 1px solid white;
+    }
+
+    button:active {
+      box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+    }
+  }
 }
