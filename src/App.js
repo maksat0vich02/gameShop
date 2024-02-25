@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import { useMainContext } from "./context/MainContext";
+import MainRoutes from "./routes/mainRoutes";
 
 function App() {
   const { DarkMode } = useMainContext();
@@ -14,6 +15,8 @@ function App() {
       className="App"
     >
       <Header />
+
+      <MainRoutes />
     </div>
   );
 }
