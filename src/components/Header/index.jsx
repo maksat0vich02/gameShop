@@ -32,6 +32,7 @@ const Header = () => {
               <NavLink to="/popular">Game Popular</NavLink>
               <NavLink to="/plastation">Playstatiion Games</NavLink>
               <NavLink to="/computer">Computer Games</NavLink>
+              <NavLink to="/all-games">All-games</NavLink>
             </nav>
             <div className="inputBox">
               <div className="inputBoxs">
@@ -46,7 +47,12 @@ const Header = () => {
                   <span> SEARCH</span>
                 </button>
               </div>
-              <div className="iconAdmin">
+              <div
+                onClick={() => {
+                  navigate("/password");
+                }}
+                className="iconAdmin"
+              >
                 <RiAdminLine />
               </div>
               <label className="switch">
