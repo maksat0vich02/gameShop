@@ -28,9 +28,14 @@ const Hero = () => {
         }}
         id="hero"
       >
-        <div className="container">
+        <div className="containe">
           <div className="hero">
             <div className="hero-box">
+              <input
+                className="input"
+                type="text"
+                placeholder="Game Search..."
+              />
               <input className="input" type="text" placeholder="text" />
               <button> Button</button>
             </div>

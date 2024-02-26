@@ -21,6 +21,9 @@ const Header = () => {
               onClick={() => {
                 navigate("/");
               }}
+              style={{
+                cursor: "pointer",
+              }}
               src="https://img.freepik.com/premium-photo/cyberpunk-gaming-controller-gamepad-joystick-illustration_691560-5812.jpg"
               alt=""
               width={100}
