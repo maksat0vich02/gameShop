@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// let counter = JSON.parse(localStorage.getItem("counts"));
-
 const Password = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -11,13 +9,6 @@ const Password = () => {
   const [count, setCount] = useState(3);
   const [times, setTimes] = useState(15);
   const navigate = useNavigate();
-
-  //   function localCount() {
-  //     localStorage.setItem("counts", JSON.stringify(count));
-  //   }
-  //   useEffect(() => {
-  //     localCount();
-  //   }, [count]);
 
   return (
     <div>

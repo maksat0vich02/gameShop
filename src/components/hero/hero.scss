@@ -9,7 +9,7 @@
     justify-content: center;
     padding-top: 300px;
     .hero-box {
-      .input {
+      .input-hero {
         border: 2px solid transparent;
         width: 50em;
         height: 3em;
@@ -22,8 +22,8 @@
         font-size: 18px;
       }
 
-      .input:hover,
-      .input:focus {
+      .input-hero:hover,
+      .input-hero:focus {
         border: 2px solid #4a9dec;
         box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
         background-color: white;
