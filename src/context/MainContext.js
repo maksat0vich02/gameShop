@@ -5,6 +5,7 @@ export const useMainContext = () => useContext(useProduct);
 let darkMode = JSON.parse(localStorage.getItem("dark"));
 
 const MainContext = ({ children }) => {
+  const API = "http://localhost:3000/data";
   const [DarkMode, setDarkmode] = useState(darkMode || false);
 
   function localDark() {
