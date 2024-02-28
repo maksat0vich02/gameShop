@@ -30,6 +30,11 @@ const Hero = () => {
         <div className="container">
           <div className="hero">
             <div className="hero-box">
+              <input
+                className="input-hero"
+                type="text"
+                placeholder="Game Search..."
+              />
               <input className="input-hero" type="text" placeholder="text" />
 
               <button> Button</button>

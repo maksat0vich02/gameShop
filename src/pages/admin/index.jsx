@@ -19,7 +19,6 @@ const Admin = () => {
   function lableInput(e) {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
-  console.log(values);
 
   return (
     <div>
