@@ -3,3 +3,5 @@
 @import "./components/hero/hero.scss";
 @import "./pages/password/password.scss";
 @import "./pages/admin/admin.scss";
+@import "./pages/allgames/games.scss";
+@import "./pages/detail/detail.scss";

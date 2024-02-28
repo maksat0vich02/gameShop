@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { RiAdminLine } from "react-icons/ri";
 import { useMainContext } from "../../context/MainContext";
 
-const Header = () => {
+const Header = ({ gameValue }) => {
   const { setDarkmode, DarkMode } = useMainContext();
   const navigate = useNavigate();
-  console.log(DarkMode);
 
   return (
     <body
@@ -34,15 +33,19 @@ const Header = () => {
             <div className="inputBox">
               <div className="inputBoxs">
                 <input
+                  onClick={() => {
+                    navigate("/search");
+                  }}
+                  onChange={(e) => gameValue(e.target.value)}
                   type="text"
                   autoComplete="off"
                   name="text"
                   className="input"
                   placeholder="Username"
                 />
-                <button>
+                <>
                   <span> SEARCH</span>
-                </button>
+                </>
               </div>
               <div
                 onClick={() => {

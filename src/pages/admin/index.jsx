@@ -11,6 +11,7 @@ const Admin = () => {
     price: "",
     comment: "",
     avtor: "",
+    genre: "",
   });
 
   function lableInput(e) {
@@ -54,6 +55,12 @@ const Admin = () => {
                 placeholder="avtor"
                 name="avtor"
               />
+              <form action="local">
+                <select onChange={lableInput} name="genre" id="">
+                  <option value="genre">приключение</option>
+                  <option value="">спорт</option>
+                </select>
+              </form>
               <button
                 onClick={() => {
                   getInputProduct(values);
