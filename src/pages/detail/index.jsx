@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { useNavigate, useParams } from "react-router-dom";
-import { Link, json, useNavigate, useParams } from "react-router-dom";
 
 let counter = JSON.parse(localStorage.getItem("counts"));
 const Detail = () => {
-  const { getGamesData, product, getOrderData } = useMainContext();
+  const { getGamesData, product } = useMainContext();
   const [readNow, setReadNow] = useState(false);
   const [count, setCount] = useState(counter || 1);
   const navigate = useNavigate();
