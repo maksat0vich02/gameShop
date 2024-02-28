@@ -1,40 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
-import { Link, json, useNavigate, useParams } from "react-router-dom";
-import { Data } from "../../API";
+import { useNavigate, useParams } from "react-router-dom";
 
 let counter = JSON.parse(localStorage.getItem("counts"));
-
 const Detail = () => {
   const { getGamesData, product } = useMainContext();
   const [readNow, setReadNow] = useState(false);
   const [count, setCount] = useState(counter || 1);
   const navigate = useNavigate();
 
-  async function getOrderData() {
-    let orders = JSON.parse(localStorage.getItem("order")) || [];
-    let res = Data.some((el) => {
-      let arr = orders.some((il) => {
-        return el.id == il.id;
-      });
-      return arr;
-    });
-    if (res == false) {
-      orders.push(Data[0]);
-      localStorage.setItem("order", JSON.stringify(orders));
-    }
-  }
-  console.log(getOrderData());
-
-  function getCount() {
-    localStorage.setItem("counts", JSON.stringify(count));
-  }
-
   const { id } = useParams();
 
   let arr = product.filter((el) => {
     return id == el.id;
   });
+
+  function getOrderData() {
+    let orders = JSON.parse(localStorage.getItem("order")) || [];
+    orders.push(arr[0]);
+    localStorage.setItem("order", JSON.stringify(orders));
+  }
+
+  function getCount() {
+    localStorage.setItem("counts", JSON.stringify(count));
+  }
 
   useEffect(() => {
     getGamesData(id);

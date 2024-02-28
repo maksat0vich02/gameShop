@@ -6,11 +6,6 @@ const Games = () => {
   const { product, getGamesData } = useMainContext();
   const [btn, setBtn] = useState(false);
   const navigate = useNavigate();
-import React, { useEffect } from "react";
-import { useMainContext } from "../../context/MainContext";
-
-const Games = () => {
-  const { product, getGamesData } = useMainContext();
 
   useEffect(() => {
     getGamesData();
@@ -59,9 +54,6 @@ const Games = () => {
               );
             })}
           </div>
-      <games>
-        <div className="container">
-          <div className="games"></div>
         </div>
       </games>
     </div>
