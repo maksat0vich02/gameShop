@@ -46,9 +46,9 @@ const Header = ({ gameValue }) => {
                   className="input"
                   placeholder="Username"
                 />
-                <>
+                <button>
                   <span> SEARCH</span>
-                </>
+                </button>
               </div>
               <div
                 onClick={() => {

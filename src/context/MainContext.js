@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { RiAwardLine } from "react-icons/ri";
 
 const useProduct = createContext();
 export const useMainContext = () => useContext(useProduct);
@@ -9,6 +10,7 @@ const MainContext = ({ children }) => {
   const API = "http://localhost:3000/data";
   const [DarkMode, setDarkmode] = useState(darkMode || false);
   const [product, setProduct] = useState([]);
+  const [gamer, setGamer] = useState([]);
 
   function localDark() {
     localStorage.setItem("dark", JSON.stringify(DarkMode));
@@ -23,6 +25,12 @@ const MainContext = ({ children }) => {
     setProduct(data);
   }
 
+  async function getOrderData(id) {
+    let { data } = await axios(`${API}/${id}`);
+    setGamer(data);
+  }
+  console.log(gamer);
+
   const values = {
     localDark,
     setDarkmode,
@@ -30,6 +38,8 @@ const MainContext = ({ children }) => {
     getInputProduct,
     getGamesData,
     product,
+    getOrderData,
+    gamer,
   };
 
   useEffect(() => {

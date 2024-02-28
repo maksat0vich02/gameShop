@@ -12,7 +12,9 @@ const Admin = () => {
     comment: "",
     avtor: "",
     genre: "",
+    category: "",
   });
+  const [boot, setBoot] = useState({ sport: "" });
 
   function lableInput(e) {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -56,9 +58,12 @@ const Admin = () => {
                 name="avtor"
               />
               <form action="local">
-                <select onChange={lableInput} name="genre" id="">
-                  <option value="genre">приключение</option>
-                  <option value="">спорт</option>
+                <select onChange={lableInput} name="category" id="">
+                  <option value="."></option>
+                  <option value={lableInput}>приключение</option>
+                  <option value={lableInput}>спорт</option>
+                  <option value={lableInput}>ЭКШН</option>
+                  <option value={lableInput}>Приключения</option>
                 </select>
               </form>
               <button

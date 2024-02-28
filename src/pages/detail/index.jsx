@@ -1,30 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { Link, json, useNavigate, useParams } from "react-router-dom";
-import { Data } from "../../API";
 
 let counter = JSON.parse(localStorage.getItem("counts"));
 
 const Detail = () => {
-  const { getGamesData, product } = useMainContext();
+  const { getGamesData, product, getOrderData } = useMainContext();
   const [readNow, setReadNow] = useState(false);
   const [count, setCount] = useState(counter || 1);
   const navigate = useNavigate();
-
-  async function getOrderData() {
-    let orders = JSON.parse(localStorage.getItem("order")) || [];
-    let res = Data.some((el) => {
-      let arr = orders.some((il) => {
-        return el.id == il.id;
-      });
-      return arr;
-    });
-    if (res == false) {
-      orders.push(Data[0]);
-      localStorage.setItem("order", JSON.stringify(orders));
-    }
-  }
-  console.log(getOrderData());
 
   function getCount() {
     localStorage.setItem("counts", JSON.stringify(count));
@@ -99,7 +83,7 @@ const Detail = () => {
 
                       <button
                         onClick={() => {
-                          getOrderData();
+                          getOrderData(id);
                           navigate("/basket");
                         }}
                       >

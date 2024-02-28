@@ -31,12 +31,7 @@ const Hero = () => {
           <div className="hero">
             <div className="hero-box">
               <input className="input-hero" type="text" placeholder="text" />
-              <input
-                className="input"
-                type="text"
-                placeholder="Game Search..."
-              />
-              <input className="input" type="text" placeholder="text" />
+
               <button> Button</button>
             </div>
           </div>

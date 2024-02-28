@@ -5,13 +5,10 @@ import Computer from "../pages/computergames";
 import { Route, Routes } from "react-router-dom";
 import Hero from "../components/hero";
 import Admin from "../pages/admin";
-import Games from "../pages/allgames/games";
-import Password from "../pages/password";
 import Detail from "../pages/detail";
-import Basket from "../pages/basket";
-import Password from "../context/password";
-import Admin from "../pages/admin";
+import Password from "../pages/password";
 import Games from "../pages/allgames/games";
+import Basket from "../pages/basket";
 
 const PUBLIC = [
   { path: "/popular", element: <Popular />, key: 1 },
@@ -20,12 +17,12 @@ const PUBLIC = [
   { path: "/", element: <Hero />, key: 4 },
   { path: "/all-games", element: <Games />, key: 4 },
   { path: "/all-games/:id", element: <Detail />, key: 5 },
-  { path: "/basket/:id", element: <Basket />, key: 6 },
+  { path: "/basket", element: <Basket />, key: 6 },
 ];
 
 const PRIVATE = [
-  { path: "/password", element: <Password />, key: 1 },
-  { path: "/admin", element: <Admin />, key: 2 },
+  { path: "/password", element: <Password />, key: 7 },
+  { path: "/admin", element: <Admin />, key: 8 },
 ];
 
 const MainRoutes = () => {
