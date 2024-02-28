@@ -15,7 +15,7 @@
       "price": "tyuio",
       "comment": "tyuio",
       "avtor": "56rt7yuio",
-      "genre": ""
+      "genre": "",
       "id": "ec2d",
       "image": "https://gamestore.kg/wp-content/uploads/2023/10/spiderman2-ps5-1.jpg",
       "textName": "spider man 2",
@@ -81,40 +81,5 @@
       "genre": "",
       "category": "Приключения"
     }
-  ],
-  "bakdrop_path": [
-    {
-      "img": "https://i.playground.ru/p/MrN84OSkA_Ys6YQbif_Geg.jpeg",
-      "id": "b78e"
-    },
-    {
-      "img": "https://www.ixbt.com/img/n1/news/2022/1/5/37b8cbaf-b0f9-4089-b264-bfeb857af868_large.jpg",
-      "id": "99c0"
-    },
-    {
-      "img": "https://image.api.playstation.com/vulcan/ap/rnd/202010/2915/SqRcyLjZbpK26ej6TnWf43xp.jpg",
-      "id": "98c7"
-    },
-    {
-      "img": "https://media.wired.co.uk/photos/606d9a7ba876dd2203a63a58/3:2/pass/the-last-of-us-part-2-credit-naughty-dog2000x1270-1.jpg",
-      "id": "503c"
-    },
-    {
-      "img": "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png",
-      "id": "f1e6"
-    },
-    {
-      "img": "https://cdn.epiccarry.com/wp-content/uploads/sites/31/2023/09/Counter-strike-2-4.webp",
-      "id": "03f1"
-    },
-    {
-      "img": "https://coop-land.ru/uploads/posts/2022-02/1643744945_1.jpg",
-      "id": "41bc"
-    },
-    {
-      "img": "https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/2028edeaf4c0b60142550a3d6e024b6009853ceb9f51591e.jpg",
-      "id": "41ba"
-    }
   ]
-}
 }

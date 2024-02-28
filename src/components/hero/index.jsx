@@ -35,7 +35,6 @@ const Hero = () => {
                 type="text"
                 placeholder="Game Search..."
               />
-              <input className="input-hero" type="text" placeholder="text" />
 
               <button> Button</button>
             </div>
