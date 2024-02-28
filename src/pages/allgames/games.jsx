@@ -6,11 +6,16 @@ const Games = () => {
   const { product, getGamesData } = useMainContext();
   const [btn, setBtn] = useState(false);
   const navigate = useNavigate();
+  const [values, setValues] = useState("все игры");
+
+  let newArr = product.filter((el) => {
+    return el.category == "спорт";
+  });
 
   useEffect(() => {
     getGamesData();
-  }, []);
-
+  }, [product]);
+  console.log(product);
   return (
     <div>
       <categories>
@@ -21,12 +26,26 @@ const Games = () => {
               <h1>Приключения && выживание</h1>
             </div>
             <div className="card-games">
-              <div className="janr-boxTwo"></div>
+              <div
+                onClick={() => {
+                  setValues("спорт");
+                }}
+                className="janr-boxTwo"
+              ></div>
               <h1>Спортивные Игры</h1>
             </div>
             <div className="card-games">
               <div className="janr-boxThree"></div>
               <h1>ЭКШН && Приключения</h1>
+            </div>
+            <div className="card-games">
+              <div
+                onClick={() => {
+                  setValues("все игры");
+                }}
+                className="janr-boxfor"
+              ></div>
+              <h1>Все Игры</h1>
             </div>
           </div>
         </div>
@@ -37,22 +56,31 @@ const Games = () => {
       <games>
         <div className="container">
           <div className="games">
-            {product.map((el) => {
-              return (
-                <div>
-                  <div className="games-all">
-                    <div className="games-block">
-                      <Link to={`/all-games/${el.id}`}>
-                        {" "}
-                        <img src={el.image} alt="" />
-                      </Link>
-                      <h1>{el.textName}</h1>
-                      <h4>{el.price}$</h4>
+            {values == "все игры"
+              ? product.map((el) => (
+                  <div>
+                    <div className="games-all">
+                      <div className="games-block">
+                        <Link to={`/all-games/${el.id}`}>
+                          <img src={el.image} alt="" />
+                        </Link>
+                        <h1>{el.textName}</h1>
+                        <p>{el.price}$</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                ))
+              : newArr.map((el) => (
+                  <div>
+                    <div className="games-all">
+                      <div className="games-block">
+                        <img src={el.image} alt="" />
+                        <h1>{el.textName}</h1>
+                        <p>{el.price}$</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </games>
