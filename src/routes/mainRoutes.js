@@ -21,6 +21,8 @@ const PRIVATE = [
   { path: "/admin", element: <Admin />, key: 2 },
 ];
 
+// alim chort
+
 const MainRoutes = () => {
   return (
     <Routes>
