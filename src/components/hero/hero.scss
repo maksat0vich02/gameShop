@@ -9,7 +9,7 @@
     justify-content: center;
     padding-top: 300px;
     .hero-box {
-      .input {
+      .input-hero {
         border: 2px solid transparent;
         width: 50em;
         height: 3em;
@@ -22,8 +22,8 @@
         font-size: 18px;
       }
 
-      .input:hover,
-      .input:focus {
+      .input-hero:hover,
+      .input-hero:focus {
         border: 2px solid #4a9dec;
         box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
         background-color: white;
@@ -97,5 +97,55 @@
     align-items: center;
     gap: 550px;
     margin-top: 40px;
+  }
+}
+
+#position {
+}
+
+.position {
+  margin-top: 200px;
+  .position-div {
+    position: relative;
+    img {
+      position: absolute;
+    }
+    .img-2 {
+      left: 720px;
+      border-radius: 80%;
+      object-fit: cover;
+      margin-top: 13pc;
+    }
+    .img-1 {
+      border-radius: 100px;
+      left: 450px;
+      top: 70px;
+    }
+    .img-3 {
+      border-radius: 100px;
+      left: 64pc;
+      top: 64px;
+    }
+    .img-4 {
+      border-radius: 100px;
+      top: 18pc;
+      left: 14pc;
+    }
+    .img-5 {
+      border-radius: 100px;
+      left: 78pc;
+      top: 18pc;
+    }
+    .img-6 {
+      object-fit: cover;
+      border-radius: 100px;
+      left: 30pc;
+      top: 29pc;
+    }
+    .img-7 {
+      border-radius: 100px;
+      left: 58pc;
+      top: 29pc;
+    }
   }
 }

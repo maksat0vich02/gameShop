@@ -1,0 +1,40 @@
+.detail-div {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  img {
+    width: 500px;
+  }
+  .detail-text {
+    p {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+  }
+  .btn-click {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: blue;
+  }
+  .btn-basket {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    button {
+      padding: 10px;
+      font-size: 28px;
+      border: none;
+      border-radius: 10px;
+      background-color: transparent;
+      border: solid 2px blue;
+
+      &&:hover {
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+      }
+    }
+  }
+}
