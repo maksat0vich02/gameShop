@@ -6,7 +6,6 @@ import { useMainContext } from "../../context/MainContext";
 const Header = () => {
   const { setDarkmode, DarkMode } = useMainContext();
   const navigate = useNavigate();
-  console.log(DarkMode);
 
   return (
     <body

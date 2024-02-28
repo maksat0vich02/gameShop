@@ -18,15 +18,53 @@ const Password = () => {
   //   useEffect(() => {
   //     localCount();
   //   }, [count]);
+  function time() {
+    setTimeout(() => {
+      if (times > 0) {
+        setTimes(times - 1);
+      } else if (times == 0) {
+        setTimes(15);
+      }
+    }, 1000);
+  }
+  console.log(times);
+  useEffect(() => {
+    if (count == 0) {
+      time();
+    }
+  });
 
   return (
     <div>
       <password>
-        <h1>попыток: {count} из 3</h1>
+        {/* <h1
+          className="h1"
+          style={{
+            display: count ? "none" : "block",
+            position: "absolute",
+          }}
+        >{` попыток: ${count} из 3`}</h1> */}
+        <h1
+          className="time"
+          style={{
+            display: count ? "none" : "block",
+            color: "red",
+          }}
+        >
+          вы можете повторить через: {times}s
+        </h1>
 
         <div className="container">
-          <div className="password">
+          <div
+            style={{
+              filter: count ? "" : "blur(3px)",
+            }}
+            className="password"
+          >
             <input
+              style={{
+                display: count ? "block" : "none",
+              }}
               className="input"
               onChange={(e) => setName(e.target.value)}
               placeholder="Username"
@@ -34,7 +72,30 @@ const Password = () => {
               name="text"
               type="text"
             />
+            <div
+              style={{
+                display: count ? "none" : "block",
+              }}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Username"
+              class="input input-2"
+              name="text"
+              type="text"
+            ></div>
+            <div
+              style={{
+                display: count ? "none" : "block",
+              }}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Username"
+              class="input input-2"
+              name="text"
+              type="text"
+            ></div>
             <input
+              style={{
+                display: count ? "block" : "none",
+              }}
               className="input"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="password"
@@ -50,11 +111,14 @@ const Password = () => {
                     return navigate("/admin");
                   } else if (name == "" && password == "") {
                     return alert("напишите имя и пароль !!!");
-                  } else if (name !== userName && password !== passwordName) {
+                  } else if (name !== userName || password !== passwordName) {
                     if (count > 0) {
                       setCount(count - 1);
+                    } else if (count == 0) {
+                      time();
+                    } else {
+                      setCount(count);
                     }
-                    alert("неверный логин и пароль!!!");
                   }
                 }
               }}

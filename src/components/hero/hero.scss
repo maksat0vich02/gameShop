@@ -9,7 +9,7 @@
     justify-content: center;
     padding-top: 300px;
     .hero-box {
-      .input {
+      .inputt {
         border: 2px solid transparent;
         width: 50em;
         height: 3em;
@@ -22,8 +22,8 @@
         font-size: 18px;
       }
 
-      .input:hover,
-      .input:focus {
+      .inputt:hover,
+      .inputt:focus {
         border: 2px solid #4a9dec;
         box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
         background-color: white;
@@ -31,7 +31,7 @@
     }
     button {
       color: #090909;
-      padding: 0.5em 1.7em;
+      padding: 0.8em 1.7em;
       font-size: 18px;
       border-radius: 0 10px 10px 0;
       background: #e8e8e8;
@@ -54,7 +54,6 @@
 .home {
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   padding-top: 300px;
   .home-right {

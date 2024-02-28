@@ -27,7 +27,7 @@ header {
         font-weight: 700;
         color: white;
         transition: 1s;
-        &&:focus {
+        &:focus {
           background: rgb(238, 174, 202);
           background: radial-gradient(
             circle,

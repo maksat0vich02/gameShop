@@ -4,7 +4,7 @@ import Playstatiion from "../pages/plastation";
 import Computer from "../pages/computergames";
 import { Route, Routes } from "react-router-dom";
 import Hero from "../components/hero";
-import Password from "../context/password";
+import Password from "../pages/password";
 import Admin from "../pages/admin";
 import Games from "../pages/allgames/games";
 

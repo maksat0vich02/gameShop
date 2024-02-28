@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useMainContext } from "../../context/MainContext";
 import axios from "axios";
 
 const Hero = () => {
-  const { DarkMode } = useMainContext();
   const [color, setColor] = useState([]);
 
   async function getBackdrop() {
@@ -32,11 +30,10 @@ const Hero = () => {
           <div className="hero">
             <div className="hero-box">
               <input
-                className="input"
+                className="inputt"
                 type="text"
                 placeholder="Game Search..."
               />
-              <input className="input" type="text" placeholder="text" />
               <button> Button</button>
             </div>
           </div>

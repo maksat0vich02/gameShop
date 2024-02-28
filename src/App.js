@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Header from "./components/Header";
 import { useMainContext } from "./context/MainContext";
 import MainRoutes from "./routes/mainRoutes";

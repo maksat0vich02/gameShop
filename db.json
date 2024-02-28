@@ -1,27 +1,4 @@
 {
-  "data": [],
-
-  "bakdrop_path": [
-    {
-      "img": "https://i.playground.ru/p/MrN84OSkA_Ys6YQbif_Geg.jpeg"
-    },
-    {
-      "img": "https://www.ixbt.com/img/n1/news/2022/1/5/37b8cbaf-b0f9-4089-b264-bfeb857af868_large.jpg"
-    },
-    {
-      "img": "https://image.api.playstation.com/vulcan/ap/rnd/202010/2915/SqRcyLjZbpK26ej6TnWf43xp.jpg"
-    },
-    {
-      "img": "https://media.wired.co.uk/photos/606d9a7ba876dd2203a63a58/3:2/pass/the-last-of-us-part-2-credit-naughty-dog2000x1270-1.jpg"
-    },
-    {
-      "img": "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
-    },
-    {
-      "img": "https://cdn.epiccarry.com/wp-content/uploads/sites/31/2023/09/Counter-strike-2-4.webp"
-    }
-  ]
-}
   "data": [
     {
       "id": "3881",
@@ -30,6 +7,22 @@
       "price": null,
       "comment": "The Last of Us Part I приглашает в захватывающее путешествие по миру после падения цивилизации – к которому привела мутация грибка кордицепс. Данный ремейк знаменитой игры The Last of Us («Одни из нас»), заслужившей более 200 престижных наград и номинаций, включая «Игра года», позволяет насладиться историей Джоэла и Элли по-новому. И это стало возможным благодаря впечатляющим техническим возможностям PS5 и современного движка студии Naughty Dog. The Last of Us Part I издаётся в России под названием «Одни из нас. Часть I». Это игра в жанре приключенческого экшена от третьего лица с элементами выживания, ужасов и шпионского боевика. Игра является консольным эксклюзивом PS5. В The Last of Us Part I игроки проследят за судьбоносными приключениями Джоэла – сурового наёмника и контрабандиста – и 14-летней девочки-подростка Элли, которую Джоэлу предстоит вывести из карантинной зоны. Путешествие, начавшееся как рутинная работа, поместит персонажей в самые драматичные ситуации, которые испытают их способность работать в команде, сопереживать и оставаться людьми. Людьми в мире, в котором выжившие предпочитают сбиваться в «волчьи стаи», а последние островки цивилизации держатся за счёт надёжных стен и жестоких законов. И всё это на фоне эпидемии, уже 20 лет превращающей людей в бездумных кровожадных чудовищ. История и все события The Last of Us были бережно",
       "avtor": "Nill Drackman"
+    },
+    {
+      "id": "fc77",
+      "image": "ytfui",
+      "textName": "yfgh",
+      "price": "ygfvjh",
+      "comment": "gvjhb",
+      "avtor": "ghv"
+    },
+    {
+      "id": "6cb5",
+      "image": "https://rukminim2.flixcart.com/image/850/1000/av-media/games/z/9/h/incredible-hulk-original-imad2ytckcxgfqvy.jpeg?q=90&crop=false",
+      "textName": "halk",
+      "price": "100",
+      "comment": "good",
+      "avtor": "maksatovich"
     }
   ],
   "bakdrop_path": [
