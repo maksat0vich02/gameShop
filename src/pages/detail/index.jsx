@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { useNavigate, useParams } from "react-router-dom";
 
-let counter = JSON.parse(localStorage.getItem("counts"));
 const Detail = () => {
-  const { getGamesData, product } = useMainContext();
+  const { getGamesData, product, setCount, count, setCounter, counter } =
+    useMainContext();
   const [readNow, setReadNow] = useState(false);
-  const [count, setCount] = useState(counter || 1);
+
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -17,18 +17,23 @@ const Detail = () => {
 
   function getOrderData() {
     let orders = JSON.parse(localStorage.getItem("order")) || [];
-    orders.push(arr[0]);
-    localStorage.setItem("order", JSON.stringify(orders));
-  }
-
-  function getCount() {
-    localStorage.setItem("counts", JSON.stringify(count));
+    let res = orders.some((el) => {
+      let str = arr.some((il) => {
+        return el.id == il.id;
+      });
+      return str;
+    });
+    if (res == false) {
+      orders.push(arr[0]);
+      localStorage.setItem("order", JSON.stringify(orders));
+    } else {
+      alert("Этот продукт уже добавлен!!!");
+    }
   }
 
   useEffect(() => {
     getGamesData(id);
-    getCount();
-  }, [count]);
+  }, []);
 
   return (
     <div>
@@ -77,7 +82,7 @@ const Detail = () => {
                       >
                         -
                       </button>
-                      <p>{count}</p>
+                      <p>{el.count + count}</p>
                       <button
                         onClick={() => {
                           setCount(count + 1);
@@ -90,6 +95,7 @@ const Detail = () => {
                         onClick={() => {
                           getOrderData(id);
                           navigate("/basket");
+                          setCounter(true);
                         }}
                       >
                         Basket

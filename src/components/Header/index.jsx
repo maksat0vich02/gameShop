@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { RiAdminLine } from "react-icons/ri";
 import { useMainContext } from "../../context/MainContext";
+import { SlBasket } from "react-icons/sl";
 
 const Header = ({ gameValue }) => {
-  const { setDarkmode, DarkMode } = useMainContext();
+  const { setDarkmode, DarkMode, count, counter } = useMainContext();
   const navigate = useNavigate();
 
   return (
@@ -57,6 +58,15 @@ const Header = ({ gameValue }) => {
                 className="iconAdmin"
               >
                 <RiAdminLine />
+              </div>
+              <div className="header-basket">
+                <SlBasket
+                  onClick={() => {
+                    navigate("/basket");
+                  }}
+                  className="iconBasket"
+                />
+                <p>{counter == true ? count : false}</p>
               </div>
               <label className="switch">
                 <input

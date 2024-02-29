@@ -11,6 +11,8 @@ const MainContext = ({ children }) => {
   const [DarkMode, setDarkmode] = useState(darkMode || false);
   const [product, setProduct] = useState([]);
   const [gamer, setGamer] = useState([]);
+  const [count, setCount] = useState(1);
+  const [counter, setCounter] = useState(false);
 
   function localDark() {
     localStorage.setItem("dark", JSON.stringify(DarkMode));
@@ -25,11 +27,17 @@ const MainContext = ({ children }) => {
     setProduct(data);
   }
 
-  async function getOrderData(id) {
-    let { data } = await axios(`${API}/${id}`);
+  async function getOrderData(product) {
+    let { data } = await axios(`${API}/${product}`);
     setGamer(data);
   }
-  console.log(gamer);
+
+  async function DeleteData(id) {
+    await axios.delete(`${API}/${id}`);
+    getGamesData();
+  }
+
+  console.log();
 
   const values = {
     localDark,
@@ -40,6 +48,11 @@ const MainContext = ({ children }) => {
     product,
     getOrderData,
     gamer,
+    DeleteData,
+    setCount,
+    count,
+    setCounter,
+    counter,
   };
 
   useEffect(() => {

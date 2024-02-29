@@ -3,8 +3,13 @@ import { useMainContext } from "../../context/MainContext";
 import axios from "axios";
 
 const Hero = () => {
-  const { DarkMode } = useMainContext();
+  const { DarkMode, product, getGamesData } = useMainContext();
   const [color, setColor] = useState([]);
+  const [Search, setSearch] = useState("");
+
+  let newRes = product.filter((el) => {
+    return el.textName.toLowerCase() == Search;
+  });
 
   async function getBackdrop() {
     await axios(`http://localhost:3000/bakdrop_path`).then((res) => {
@@ -16,7 +21,9 @@ const Hero = () => {
 
   useEffect(() => {
     getBackdrop();
+    getGamesData(Search);
   }, []);
+
   let image = color[Math.floor(Math.random() * color.length)];
 
   return (
@@ -30,13 +37,44 @@ const Hero = () => {
         <div className="container">
           <div className="hero">
             <div className="hero-box">
-              <input
-                className="input-hero"
-                type="text"
-                placeholder="Game Search..."
-              />
+              <div className="hero-all">
+                <input
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="input-hero"
+                  type="text"
+                  placeholder="Game Search..."
+                />
 
-              <button> Button</button>
+                <button
+                  onClick={() => {
+                    setSearch(Search);
+                  }}
+                >
+                  {" "}
+                  Button
+                </button>
+                <div
+                  className="hero-detail"
+                  style={{
+                    transform:
+                      Search.length > 0 ? "translateY(3px)" : "translateY(0)",
+                    height: Search.length > 1 ? "500px" : "",
+                    background: Search.length > 0 ? "white" : "",
+                    width: Search.length > 0 ? "100%" : "",
+                    transition: "1s",
+                  }}
+                >
+                  {newRes.map((el) => (
+                    <div>
+                      <div className="games-All">
+                        <img src={el.image} alt="" />
+                        <h1>{el.textName}</h1>
+                        <p>{el.price}$</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
