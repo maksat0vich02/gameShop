@@ -13,6 +13,7 @@ const Admin = () => {
     avtor: "",
     genre: "",
     category: "",
+    count: 0,
   });
   const [boot, setBoot] = useState({ sport: "" });
 

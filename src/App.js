@@ -4,6 +4,8 @@ import Footer from "./components/Footer/footer";
 import Header from "./components/Header";
 import { useMainContext } from "./context/MainContext";
 import MainRoutes from "./routes/mainRoutes";
+import { Route, Routes } from "react-router-dom";
+import Search from "./pages/search";
 
 function App() {
   const { DarkMode } = useMainContext();
@@ -18,9 +20,11 @@ function App() {
       className="App"
     >
       <Header gameValue={setSearch} />
-      {/* <Search gameSearch={search} /> */}
 
       <MainRoutes />
+      <Routes>
+        <Route path="/search" element={<Search gameSearch={search} />} />
+      </Routes>
       <Footer />
     </div>
   );

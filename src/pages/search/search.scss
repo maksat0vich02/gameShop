@@ -1,0 +1,20 @@
+#seacrh {
+  .search {
+    .gamesAll {
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 20px;
+        font-family: 500;
+      }
+    }
+  }
+}

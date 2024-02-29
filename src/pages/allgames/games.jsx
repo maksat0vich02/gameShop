@@ -9,7 +9,7 @@ const Games = () => {
   const [values, setValues] = useState("все игры");
 
   let newArr = product.filter((el) => {
-    return el.category == "спорт";
+    return el.category == values;
   });
 
   useEffect(() => {
@@ -22,7 +22,12 @@ const Games = () => {
         <div className="container">
           <div className="categories">
             <div className="card-games">
-              <div className="janr-box"></div>
+              <div
+                onClick={() => {
+                  setValues("Приключения");
+                }}
+                className="janr-box"
+              ></div>
               <h1>Приключения && выживание</h1>
             </div>
             <div className="card-games">
@@ -35,7 +40,12 @@ const Games = () => {
               <h1>Спортивные Игры</h1>
             </div>
             <div className="card-games">
-              <div className="janr-boxThree"></div>
+              <div
+                onClick={() => {
+                  setValues("ЭКШН");
+                }}
+                className="janr-boxThree"
+              ></div>
               <h1>ЭКШН && Приключения</h1>
             </div>
             <div className="card-games">

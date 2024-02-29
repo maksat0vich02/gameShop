@@ -9,6 +9,7 @@ import Detail from "../pages/detail";
 import Password from "../pages/password";
 import Games from "../pages/allgames/games";
 import Basket from "../pages/basket";
+import Search from "../pages/search";
 
 const PUBLIC = [
   { path: "/popular", element: <Popular />, key: 1 },
@@ -21,11 +22,11 @@ const PUBLIC = [
 ];
 
 const PRIVATE = [
-  { path: "/password", element: <Password />, key: 7 },
-  { path: "/admin", element: <Admin />, key: 8 },
+  { path: "/password", element: <Password />, key: 8 },
+  { path: "/admin", element: <Admin />, key: 9 },
 ];
 
-const MainRoutes = () => {
+const MainRoutes = ({ gameSearch }) => {
   return (
     <Routes>
       {PUBLIC.map((el) => (
