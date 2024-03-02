@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
 
 const Basket = () => {
-  const { DeleteData, count, setCount, counter } = useMainContext();
+  const { count, setCount } = useMainContext();
   const [basket, setBasket] = useState([]);
 
   function deleteOrder(id) {
@@ -33,7 +33,7 @@ const Basket = () => {
                   <h1>{el.textName}</h1>
                   <h3>{el.avtor}</h3>
                   <p>{el.price * count}$</p>
-
+                  <p>{el.count}</p>
                   <div className="btn-text">
                     <button
                       onClick={() => {

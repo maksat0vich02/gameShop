@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Games = () => {
   const { product, getGamesData } = useMainContext();
-  const [btn, setBtn] = useState(false);
-  const navigate = useNavigate();
   const [values, setValues] = useState("все игры");
+  const [card, setCard] = useState(false);
+  const [cardOne, setCardOne] = useState(true);
+  const [cardTwo, setCardTwo] = useState(true);
+  const [cardThree, setCardThree] = useState(true);
 
   let newArr = product.filter((el) => {
     return el.category == values;
@@ -15,43 +17,86 @@ const Games = () => {
   useEffect(() => {
     getGamesData();
   }, [product]);
-
+  //  bekasultan
   return (
     <div>
       <categories>
         <div className="container">
           <div className="categories">
-            <div className="card-games">
+            <div
+              onClick={() => {
+                setCard(true);
+                setCardOne(false);
+                setCardTwo(false);
+                setCardThree(false);
+              }}
+              style={{
+                height: card ? "400px" : "200px",
+              }}
+              className="card-games"
+            >
               <div
                 onClick={() => {
                   setValues("Приключения");
                 }}
                 className="janr-box"
               ></div>
-              <h1>Приключения && выживание</h1>
+              <h1
+                style={{
+                  transform: "none",
+                }}
+              >
+                Приключения && выживание
+              </h1>
             </div>
-            <div className="card-games">
+            <div
+              style={{
+                height: cardOne ? "400px" : "200px",
+              }}
+              className="card-games"
+            >
               <div
                 onClick={() => {
+                  setCard(false);
+                  setCardOne(true);
+                  setCardTwo(false);
+                  setCardThree(false);
                   setValues("спорт");
                 }}
                 className="janr-boxTwo"
               ></div>
               <h1>Спортивные Игры</h1>
             </div>
-            <div className="card-games">
+            <div
+              style={{
+                height: cardTwo ? "400px" : "200px",
+              }}
+              className="card-games"
+            >
               <div
                 onClick={() => {
+                  setCard(false);
+                  setCardOne(false);
+                  setCardTwo(true);
+                  setCardThree(false);
                   setValues("ЭКШН");
-                  console.log(product);
                 }}
                 className="janr-boxThree"
               ></div>
               <h1>ЭКШН && Приключения</h1>
             </div>
-            <div className="card-games">
+            <div
+              style={{
+                height: cardThree ? "400px" : "200px",
+              }}
+              className="card-games"
+            >
               <div
                 onClick={() => {
+                  setCard(false);
+                  setCardOne(false);
+                  setCardTwo(false);
+                  setCardThree(true);
                   setValues("все игры");
                 }}
                 className="janr-boxfor"
