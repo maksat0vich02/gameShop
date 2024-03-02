@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 
 const Detail = () => {
-  const {
     getGamesData,
     product,
     setCount,
@@ -16,6 +15,8 @@ const Detail = () => {
     setBreaks,
     breaks,
   } = useMainContext();
+  const { getGamesData, product, setCount, count, setCounter, counter } =
+    useMainContext();
   const [readNow, setReadNow] = useState(false);
 
   const navigate = useNavigate();

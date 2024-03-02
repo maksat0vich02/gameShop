@@ -38,6 +38,7 @@ const Basket = () => {
                     <button
                       onClick={() => {
                         deleteOrder(el.id);
+                        setCount(count == false);
                       }}
                       className="btnDel"
                     >

@@ -22,8 +22,6 @@ const Search = ({ gameSearch }) => {
             {Searching.map((el) => {
               return (
                 <div className="gamesAll">
-                  <Link to={`/all-games/${el.id}`}>
-                    <img src={el.image} alt="" />
                   </Link>
 
                   <h1>{el.textName}</h1>
