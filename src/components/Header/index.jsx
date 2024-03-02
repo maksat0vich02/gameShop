@@ -66,7 +66,7 @@ const Header = ({ gameValue }) => {
                   }}
                   className="iconBasket"
                 />
-                <p>{counter == true ? count : false}</p>
+                <p>{counter}</p>
               </div>
               <label className="switch">
                 <input

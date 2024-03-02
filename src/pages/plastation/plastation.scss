@@ -1,0 +1,17 @@
+.plastation {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  row-gap: 100px;
+  .ps-div {
+    img {
+      width: 400px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+}

@@ -13,6 +13,8 @@ const MainContext = ({ children }) => {
   const [gamer, setGamer] = useState([]);
   const [count, setCount] = useState(1);
   const [counter, setCounter] = useState(false);
+  const [shet, setShet] = useState(0);
+  const [breaks, setBreaks] = useState(false);
 
   function localDark() {
     localStorage.setItem("dark", JSON.stringify(DarkMode));
@@ -40,6 +42,8 @@ const MainContext = ({ children }) => {
   console.log();
 
   const values = {
+    shet,
+    setShet,
     localDark,
     setDarkmode,
     DarkMode,
@@ -53,6 +57,8 @@ const MainContext = ({ children }) => {
     count,
     setCounter,
     counter,
+    setBreaks,
+    breaks,
   };
 
   useEffect(() => {
