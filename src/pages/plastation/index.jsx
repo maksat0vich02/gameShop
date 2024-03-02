@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useMainContext } from "../../context/MainContext";
-import video from 
 
 const Playstatiion = () => {
   const { getGamesData, product } = useMainContext();
@@ -26,7 +25,6 @@ const Playstatiion = () => {
                 </div>
               </div>
             ))}
-
             <video
               src="https://youtu.be/-GvDTvLRe3k?si=aMV9peeIsBkxRKzd"
               muted

@@ -1,13 +1,20 @@
-import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { RiAdminLine } from "react-icons/ri";
 import { useMainContext } from "../../context/MainContext";
 import { SlBasket } from "react-icons/sl";
+import { useEffect, useState } from "react";
 
 const Header = ({ gameValue }) => {
   const { setDarkmode, DarkMode, count, counter } = useMainContext();
   const navigate = useNavigate();
-
+  const [baket, setBasket] = useState([]);
+  function getOrder() {
+    let order = JSON.parse(localStorage.getItem("order")) || [];
+    setBasket(order);
+  }
+  useEffect(() => {
+    getOrder();
+  }, [baket, counter]);
   return (
     <body
       style={{
@@ -66,8 +73,13 @@ const Header = ({ gameValue }) => {
                   }}
                   className="iconBasket"
                 />
-                <p>{counter}</p>
-                <p>{counter == true ? count : false}</p>
+                <p
+                  style={{
+                    display: counter == 0 ? "none" : "block",
+                  }}
+                >
+                  {baket.length}
+                </p>
               </div>
               <label className="switch">
                 <input

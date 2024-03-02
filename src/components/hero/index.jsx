@@ -3,7 +3,7 @@ import { useMainContext } from "../../context/MainContext";
 import axios from "axios";
 
 const Hero = () => {
-  const { DarkMode, product, getGamesData } = useMainContext();
+  const { product, getGamesData } = useMainContext();
   const [color, setColor] = useState([]);
   const [Search, setSearch] = useState("");
 

@@ -19,9 +19,9 @@ const Footer = () => {
             </div>
             <div className="footer-a">
               <h5>game center</h5>
-              <a href="#">home</a>
+              <a href="/">home</a>
               <a href="#">about</a>
-              <a href="#">games</a>
+              <a href="/all-games">games</a>
               <a href="#">service</a>
               <a href="#">contact</a>
             </div>
@@ -45,9 +45,9 @@ const Footer = () => {
             <div className="footer-a">
               <h5>Help</h5>
 
-              <a href="#">home</a>
+              <a href="/">home</a>
               <a href="#">abouot</a>
-              <a href="#">games</a>
+              <a href="/all-games">games</a>
               <a href="#">service</a>
               <a href="#">contact</a>
             </div>

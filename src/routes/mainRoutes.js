@@ -9,7 +9,6 @@ import Detail from "../pages/detail";
 import Password from "../pages/password";
 import Games from "../pages/allgames/games";
 import Basket from "../pages/basket";
-import Search from "../pages/search";
 
 const PUBLIC = [
   { path: "/popular", element: <Popular />, key: 1 },

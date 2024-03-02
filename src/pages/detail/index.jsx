@@ -4,17 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 
 const Detail = () => {
-    getGamesData,
-    product,
-    setCount,
-    count,
-    setCounter,
-    counter,
-    shet,
-    setShet,
-    setBreaks,
-    breaks,
-  } = useMainContext();
   const { getGamesData, product, setCount, count, setCounter, counter } =
     useMainContext();
   const [readNow, setReadNow] = useState(false);
@@ -42,9 +31,8 @@ const Detail = () => {
       alert("Этот продукт уже добавлен!!!");
     }
   }
-  console.log(counter);
   useEffect(() => {
-    getGamesData(id);
+    getGamesData();
   }, []);
 
   return (
@@ -91,21 +79,15 @@ const Detail = () => {
                     <div className="btn-basket">
                       <button
                         onClick={() => {
-                          if (count > 1) {
-                            setCount(count - 1);
+                          if (el.count > 1) {
+                            return (el.count -= 1);
                           }
                         }}
                       >
                         -
                       </button>
-                      <p>{el.count + count}</p>
-                      <button
-                        onClick={() => {
-                          setCount(count + 1);
-                        }}
-                      >
-                        +
-                      </button>
+                      <p>{el.count}</p>
+                      <button onClick={() => (el.count += 1)}>+</button>
 
                       <button
                         onClick={() => {

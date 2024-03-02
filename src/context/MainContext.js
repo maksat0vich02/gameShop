@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { RiAwardLine } from "react-icons/ri";
 
 const useProduct = createContext();
 export const useMainContext = () => useContext(useProduct);
