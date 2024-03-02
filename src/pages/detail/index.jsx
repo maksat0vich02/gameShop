@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useMainContext } from "../../context/MainContext";
 import { useNavigate, useParams } from "react-router-dom";
+import { AiOutlineCheck } from "react-icons/ai";
 
 const Detail = () => {
+    getGamesData,
+    product,
+    setCount,
+    count,
+    setCounter,
+    counter,
+    shet,
+    setShet,
+    setBreaks,
+    breaks,
+  } = useMainContext();
   const { getGamesData, product, setCount, count, setCounter, counter } =
     useMainContext();
   const [readNow, setReadNow] = useState(false);
@@ -30,7 +42,7 @@ const Detail = () => {
       alert("Этот продукт уже добавлен!!!");
     }
   }
-
+  console.log(counter);
   useEffect(() => {
     getGamesData(id);
   }, []);
@@ -71,6 +83,10 @@ const Detail = () => {
                     >
                       закрыть
                     </button>
+                    <h5>
+                      {" "}
+                      <AiOutlineCheck className="detail-icons" /> в наличии
+                    </h5>
 
                     <div className="btn-basket">
                       <button
@@ -93,7 +109,9 @@ const Detail = () => {
 
                       <button
                         onClick={() => {
-                          getOrderData(id);
+                          if (getOrderData(id) > 1) {
+                            setCounter(true);
+                          }
                           navigate("/basket");
                           setCounter(true);
                         }}

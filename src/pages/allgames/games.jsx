@@ -15,7 +15,7 @@ const Games = () => {
   useEffect(() => {
     getGamesData();
   }, [product]);
-  console.log(product);
+
   return (
     <div>
       <categories>
@@ -43,6 +43,7 @@ const Games = () => {
               <div
                 onClick={() => {
                   setValues("ЭКШН");
+                  console.log(product);
                 }}
                 className="janr-boxThree"
               ></div>

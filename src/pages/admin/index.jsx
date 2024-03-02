@@ -11,7 +11,7 @@ const Admin = () => {
     price: "",
     comment: "",
     avtor: "",
-    genre: "",
+    GENREE: "",
     category: "",
     count: 0,
   });
@@ -59,11 +59,17 @@ const Admin = () => {
               />
               <form action="local">
                 <select onChange={lableInput} name="category" id="">
-                  <option value="."></option>
+                  <option value=".">Категория</option>
                   <option value={lableInput}>приключение</option>
                   <option value={lableInput}>спорт</option>
                   <option value={lableInput}>ЭКШН</option>
                   <option value={lableInput}>Приключения</option>
+                </select>
+                <select onChange={lableInput} name="GENREE" id="">
+                  <option value="">Жанры</option>
+                  <option value={lableInput}>Plastation</option>
+                  <option value={lableInput}>Компьютерные Игры</option>
+                  <option value={lableInput}>Популярные Игры</option>
                 </select>
               </form>
               <button
